@@ -18,28 +18,20 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 性能容量型变配参数
+ * MigrateClassicalLoadBalancers返回参数结构体
  *
- * @method string getLoadBalancerId() 获取lb的字符串ID
- * @method void setLoadBalancerId(string $LoadBalancerId) 设置lb的字符串ID
- * @method string getSlaType() 获取变更为性能容量型，固定为SLA
- * @method void setSlaType(string $SlaType) 设置变更为性能容量型，固定为SLA
+ * @method string getRequestId() 获取唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+ * @method void setRequestId(string $RequestId) 设置唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
  */
-class SlaUpdateParam extends AbstractModel
+class MigrateClassicalLoadBalancersResponse extends AbstractModel
 {
     /**
-     * @var string lb的字符串ID
+     * @var string 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
-    public $LoadBalancerId;
+    public $RequestId;
 
     /**
-     * @var string 变更为性能容量型，固定为SLA
-     */
-    public $SlaType;
-
-    /**
-     * @param string $LoadBalancerId lb的字符串ID
-     * @param string $SlaType 变更为性能容量型，固定为SLA
+     * @param string $RequestId 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class SlaUpdateParam extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("LoadBalancerId",$param) and $param["LoadBalancerId"] !== null) {
-            $this->LoadBalancerId = $param["LoadBalancerId"];
-        }
-
-        if (array_key_exists("SlaType",$param) and $param["SlaType"] !== null) {
-            $this->SlaType = $param["SlaType"];
+        if (array_key_exists("RequestId",$param) and $param["RequestId"] !== null) {
+            $this->RequestId = $param["RequestId"];
         }
     }
 }
