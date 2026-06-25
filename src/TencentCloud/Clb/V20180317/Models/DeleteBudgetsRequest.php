@@ -18,28 +18,20 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型路由实例的标签信息
+ * DeleteBudgets请求参数结构体
  *
- * @method string getTagKey() 获取标签的键
- * @method void setTagKey(string $TagKey) 设置标签的键
- * @method string getTagValue() 获取标签的值
- * @method void setTagValue(string $TagValue) 设置标签的值
+ * @method array getBudgetIds() 获取<p>要删除的Budget ID列表。</p>
+ * @method void setBudgetIds(array $BudgetIds) 设置<p>要删除的Budget ID列表。</p>
  */
-class TagInfo extends AbstractModel
+class DeleteBudgetsRequest extends AbstractModel
 {
     /**
-     * @var string 标签的键
+     * @var array <p>要删除的Budget ID列表。</p>
      */
-    public $TagKey;
+    public $BudgetIds;
 
     /**
-     * @var string 标签的值
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey 标签的键
-     * @param string $TagValue 标签的值
+     * @param array $BudgetIds <p>要删除的Budget ID列表。</p>
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class TagInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("BudgetIds",$param) and $param["BudgetIds"] !== null) {
+            $this->BudgetIds = $param["BudgetIds"];
         }
     }
 }

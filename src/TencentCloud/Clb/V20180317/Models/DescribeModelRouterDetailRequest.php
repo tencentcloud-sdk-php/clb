@@ -18,28 +18,20 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型路由实例的标签信息
+ * DescribeModelRouterDetail请求参数结构体
  *
- * @method string getTagKey() 获取标签的键
- * @method void setTagKey(string $TagKey) 设置标签的键
- * @method string getTagValue() 获取标签的值
- * @method void setTagValue(string $TagValue) 设置标签的值
+ * @method string getModelRouterId() 获取<p>模型路由实例ID</p>
+ * @method void setModelRouterId(string $ModelRouterId) 设置<p>模型路由实例ID</p>
  */
-class TagInfo extends AbstractModel
+class DescribeModelRouterDetailRequest extends AbstractModel
 {
     /**
-     * @var string 标签的键
+     * @var string <p>模型路由实例ID</p>
      */
-    public $TagKey;
+    public $ModelRouterId;
 
     /**
-     * @var string 标签的值
-     */
-    public $TagValue;
-
-    /**
-     * @param string $TagKey 标签的键
-     * @param string $TagValue 标签的值
+     * @param string $ModelRouterId <p>模型路由实例ID</p>
      */
     function __construct()
     {
@@ -54,12 +46,8 @@ class TagInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
-        }
-
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("ModelRouterId",$param) and $param["ModelRouterId"] !== null) {
+            $this->ModelRouterId = $param["ModelRouterId"];
         }
     }
 }

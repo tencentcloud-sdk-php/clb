@@ -18,28 +18,28 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型路由实例的标签信息
+ * 重新生成的Key信息
  *
- * @method string getTagKey() 获取标签的键
- * @method void setTagKey(string $TagKey) 设置标签的键
- * @method string getTagValue() 获取标签的值
- * @method void setTagValue(string $TagValue) 设置标签的值
+ * @method string getKeyId() 获取<p>Key的ID</p>
+ * @method void setKeyId(string $KeyId) 设置<p>Key的ID</p>
+ * @method string getKey() 获取<p>重新生成的明文Key</p>
+ * @method void setKey(string $Key) 设置<p>重新生成的明文Key</p>
  */
-class TagInfo extends AbstractModel
+class RegeneratedKey extends AbstractModel
 {
     /**
-     * @var string 标签的键
+     * @var string <p>Key的ID</p>
      */
-    public $TagKey;
+    public $KeyId;
 
     /**
-     * @var string 标签的值
+     * @var string <p>重新生成的明文Key</p>
      */
-    public $TagValue;
+    public $Key;
 
     /**
-     * @param string $TagKey 标签的键
-     * @param string $TagValue 标签的值
+     * @param string $KeyId <p>Key的ID</p>
+     * @param string $Key <p>重新生成的明文Key</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TagInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("KeyId",$param) and $param["KeyId"] !== null) {
+            $this->KeyId = $param["KeyId"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("Key",$param) and $param["Key"] !== null) {
+            $this->Key = $param["Key"];
         }
     }
 }

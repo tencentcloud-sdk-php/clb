@@ -18,28 +18,28 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型路由实例的标签信息
+ * 创建Key的信息
  *
- * @method string getTagKey() 获取标签的键
- * @method void setTagKey(string $TagKey) 设置标签的键
- * @method string getTagValue() 获取标签的值
- * @method void setTagValue(string $TagValue) 设置标签的值
+ * @method string getKeyName() 获取<p>Key的名称</p>
+ * @method void setKeyName(string $KeyName) 设置<p>Key的名称</p>
+ * @method string getPlainKey() 获取<p>导入的明文Key</p><p>仅允许导入Key模式下输入</p>
+ * @method void setPlainKey(string $PlainKey) 设置<p>导入的明文Key</p><p>仅允许导入Key模式下输入</p>
  */
-class TagInfo extends AbstractModel
+class InputKeyInfo extends AbstractModel
 {
     /**
-     * @var string 标签的键
+     * @var string <p>Key的名称</p>
      */
-    public $TagKey;
+    public $KeyName;
 
     /**
-     * @var string 标签的值
+     * @var string <p>导入的明文Key</p><p>仅允许导入Key模式下输入</p>
      */
-    public $TagValue;
+    public $PlainKey;
 
     /**
-     * @param string $TagKey 标签的键
-     * @param string $TagValue 标签的值
+     * @param string $KeyName <p>Key的名称</p>
+     * @param string $PlainKey <p>导入的明文Key</p><p>仅允许导入Key模式下输入</p>
      */
     function __construct()
     {
@@ -54,12 +54,12 @@ class TagInfo extends AbstractModel
         if ($param === null) {
             return;
         }
-        if (array_key_exists("TagKey",$param) and $param["TagKey"] !== null) {
-            $this->TagKey = $param["TagKey"];
+        if (array_key_exists("KeyName",$param) and $param["KeyName"] !== null) {
+            $this->KeyName = $param["KeyName"];
         }
 
-        if (array_key_exists("TagValue",$param) and $param["TagValue"] !== null) {
-            $this->TagValue = $param["TagValue"];
+        if (array_key_exists("PlainKey",$param) and $param["PlainKey"] !== null) {
+            $this->PlainKey = $param["PlainKey"];
         }
     }
 }
