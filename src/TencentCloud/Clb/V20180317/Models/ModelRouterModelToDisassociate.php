@@ -18,7 +18,7 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * 模型路由关联的模型
+ * CMR实例待解绑的模型信息
  *
  * @method string getModelName() 获取<p>模型名称</p>
  * @method void setModelName(string $ModelName) 设置<p>模型名称</p>
@@ -28,12 +28,8 @@ use TencentCloud\Common\AbstractModel;
  * @method void setType(string $Type) 设置<p>模型类型。</p><p>枚举值：</p><ul><li>BYOK： BYOK类型</li><li>Platform： 平台类型</li></ul>
  * @method string getServiceProviderId() 获取<p>BYOK实例ID</p>
  * @method void setServiceProviderId(string $ServiceProviderId) 设置<p>BYOK实例ID</p>
- * @method integer getOrder() 获取<p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
- * @method void setOrder(integer $Order) 设置<p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
- * @method integer getWeight() 获取<p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
- * @method void setWeight(integer $Weight) 设置<p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
  */
-class ModelRouterModel extends AbstractModel
+class ModelRouterModelToDisassociate extends AbstractModel
 {
     /**
      * @var string <p>模型名称</p>
@@ -56,22 +52,10 @@ class ModelRouterModel extends AbstractModel
     public $ServiceProviderId;
 
     /**
-     * @var integer <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
-     */
-    public $Order;
-
-    /**
-     * @var integer <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
-     */
-    public $Weight;
-
-    /**
      * @param string $ModelName <p>模型名称</p>
      * @param string $Provider <p>所属厂商</p>
      * @param string $Type <p>模型类型。</p><p>枚举值：</p><ul><li>BYOK： BYOK类型</li><li>Platform： 平台类型</li></ul>
      * @param string $ServiceProviderId <p>BYOK实例ID</p>
-     * @param integer $Order <p>当前 CMR、当前绑定模型下该 BYOK实例的调度优先级。</p><p>取值范围：[0, 2]</p><p>默认值：0</p>
-     * @param integer $Weight <p>当前CMR、当前绑定模型的同一有效Order层内，BYOK实例之间的相对选择权重。</p><p>取值范围：[0, 100]</p><p>默认值：10</p>
      */
     function __construct()
     {
@@ -100,14 +84,6 @@ class ModelRouterModel extends AbstractModel
 
         if (array_key_exists("ServiceProviderId",$param) and $param["ServiceProviderId"] !== null) {
             $this->ServiceProviderId = $param["ServiceProviderId"];
-        }
-
-        if (array_key_exists("Order",$param) and $param["Order"] !== null) {
-            $this->Order = $param["Order"];
-        }
-
-        if (array_key_exists("Weight",$param) and $param["Weight"] !== null) {
-            $this->Weight = $param["Weight"];
         }
     }
 }
