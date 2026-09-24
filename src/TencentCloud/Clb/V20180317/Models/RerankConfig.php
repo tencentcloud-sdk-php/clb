@@ -18,31 +18,31 @@ namespace TencentCloud\Clb\V20180317\Models;
 use TencentCloud\Common\AbstractModel;
 
 /**
- * embedding配置。
+ * Rerank调度配置。
  *
- * @method string getRoutingStrategy() 获取<p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+ * @method string getRoutingStrategy() 获取<p>L2路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoutingStrategy(string $RoutingStrategy) 设置<p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+ * @method void setRoutingStrategy(string $RoutingStrategy) 设置<p>L2路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method RoutingStrategyArgs getRoutingStrategyArgs() 获取<p>路由参数</p>
+ * @method RoutingStrategyArgs getRoutingStrategyArgs() 获取<p>L2路由算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
- * @method void setRoutingStrategyArgs(RoutingStrategyArgs $RoutingStrategyArgs) 设置<p>路由参数</p>
+ * @method void setRoutingStrategyArgs(RoutingStrategyArgs $RoutingStrategyArgs) 设置<p>L2路由算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method integer getNumRetries() 获取<p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
  * @method void setNumRetries(integer $NumRetries) 设置<p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
  */
-class EmbeddingConfig extends AbstractModel
+class RerankConfig extends AbstractModel
 {
     /**
-     * @var string <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+     * @var string <p>L2路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutingStrategy;
 
     /**
-     * @var RoutingStrategyArgs <p>路由参数</p>
+     * @var RoutingStrategyArgs <p>L2路由算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      */
     public $RoutingStrategyArgs;
@@ -54,9 +54,9 @@ class EmbeddingConfig extends AbstractModel
     public $NumRetries;
 
     /**
-     * @param string $RoutingStrategy <p>模型内路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
+     * @param string $RoutingStrategy <p>L2路由策略</p><p>枚举值：</p><ul><li>SimpleShuffle： 简单随机路由</li><li>LeastBusy： 最低繁忙路由</li><li>LatencyBasedRouting： 最低延迟路由</li><li>UsageBasedRouting： 用量均衡路由</li><li>CostBasedRouting： 最低积分路由</li></ul>
 注意：此字段可能返回 null，表示取不到有效值。
-     * @param RoutingStrategyArgs $RoutingStrategyArgs <p>路由参数</p>
+     * @param RoutingStrategyArgs $RoutingStrategyArgs <p>L2路由算法参数</p>
 注意：此字段可能返回 null，表示取不到有效值。
      * @param integer $NumRetries <p>CMR实例级别模型组内请求重试次数</p><p>取值范围：[0, 5]</p><p>默认值：2</p>
 注意：此字段可能返回 null，表示取不到有效值。
